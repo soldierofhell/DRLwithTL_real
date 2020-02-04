@@ -8,7 +8,7 @@ class AlexNetDuel(object):
     def __init__(self, x, num_actions, train_type):
         self.x = x
         weights_path = 'DeepNet/models/imagenet.npy'
-        weights = np.load(open(weights_path, "rb"), encoding="latin1").item()
+        weights = np.load(open(weights_path, "rb"), encoding="latin1", allow_pickle=True).item()
         print('Loading imagenet weights for the conv layers and random for fc layers')
         train_conv = True
         train_fc6 = True
