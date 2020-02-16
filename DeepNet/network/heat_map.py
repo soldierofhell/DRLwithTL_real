@@ -13,7 +13,7 @@ class heat_map():
             width = 304
             channels = 3
             batch_size = 1
-            model_data_path = 'Deepnet/models/fcrn/NYU_FCRN.ckpt'
+            model_data_path = 'DeepNet/models/fcrn/NYU_FCRN.ckpt'
             self.input_node = tf.placeholder(tf.float32, shape=(None, height, width, channels))
             self.net = ResNet50UpProj({'data': self.input_node}, batch_size, 1, False)
 
